@@ -110,7 +110,7 @@ def find_proie(pred, n) -> Proie | None:
     if len(proies) == 0:
         return
     positions = list(itertools.product(range(-n, n + 1), range(-n, n + 1)))
-    #coordonnées des cases situés à n cases
+    #coordonnées des positions situés à n cases
     start = True
     while start or len(positions) > 1 and not isinstance(cadre[nx][ny], Proie):
 
@@ -180,7 +180,7 @@ if __name__ == '__main__':
     EPRE = 4  # énergie des prédateurs
     APROIE = 10  # durée de vie des proies
     FLAIR = 5  # flair des prédateurs
-    F_REPR_PRED = 8  # Fréquende de reproduction des prédateurs
+    F_REPR_PRED = 8  # Fréquence de reproduction des prédateurs
     CALORIES_PROIE = 2  # Points d'énergies aquis à la consommation d'une proie
 
     for i in range(0, longueur, longueur//NB_CASES):
