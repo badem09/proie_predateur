@@ -155,7 +155,6 @@ def deplace_pred():
         if pred.energie % F_REPR_PRED == 0:
             naissance_pred(1)
         g.actualiser()
-    death_pred()
 
 
 def death_pred():
@@ -165,6 +164,7 @@ def death_pred():
             g.supprimer(pred.graph)
             predateurs.remove(pred)
             cadre[pred.cadre_x][pred.cadre_y] = None
+
 
 if __name__ == '__main__':
     longueur = largeur = 600
@@ -190,8 +190,8 @@ if __name__ == '__main__':
     liste_pred = []
     liste_proie = []
 
-    naissance_proie(10)
-    naissance_pred(3)
+    naissance_proie(20)
+    naissance_pred(5)
     for _ in range(500):
         liste_proie.append(len(proies))
         liste_pred.append(len(predateurs))
@@ -202,6 +202,7 @@ if __name__ == '__main__':
         g.actualiser()
         deplace_pred()
         g.actualiser()
+        death_pred()
         if len(predateurs) == 0 or len(proies) == 0:
             break
 
