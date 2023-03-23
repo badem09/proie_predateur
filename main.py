@@ -26,12 +26,12 @@ def naissance_proie(num):
 
 def deplace_proie():
     for p in proies:
-        pos = [(0, 0), (-1, 0), (0, -1), (1, 0), (0, 1), (1, 1), (-1, -1), (1, -1), (-1, 1)]
-        x, y = random.choice(pos)
-        while len(pos) > 0 and not pos_valide(x + p.cadre_x, y + p.cadre_y):
-            x, y = random.choice(pos)
-            pos.remove((x, y))
-        if len(pos) > 1:  # si deplacement
+        positions = list(itertools.product(range(-1, 2),range(-1, 2)))  # produit cartésien
+        x, y = random.choice(positions)
+        while len(positions) > 0 and not pos_valide(x + p.cadre_x, y + p.cadre_y):
+            x, y = random.choice(positions)
+            positions.remove((x, y))
+        if len(positions) > 1:  # si deplacement
             cadre[p.cadre_x][p.cadre_y] = None
             g.deplacer(p.graph, x * RATIO, y * RATIO)
             p.cadre_y += y
@@ -54,7 +54,7 @@ def death_proies():
 
 
 def place_libre(p1, p2):
-    positions = [(-1, 0), (0, -1), (1, 0), (0, 1), (1, 1), (-1, -1), (1, -1), (-1, 1)]
+    positions = list(itertools.product(range(-1, 2), range(-1, 2)))
     for pos in positions:
         if pos_valide(p1.cadre_x + pos[0], p1.cadre_y + pos[1]):
             return p1.cadre_x + pos[0], p1.cadre_y + pos[1]
