@@ -1,4 +1,6 @@
 import itertools
+import time
+
 import tkiteasy as tki
 from characters import Proie, Predateur
 import random
@@ -179,7 +181,7 @@ if __name__ == '__main__':
 
     EPRE = 4  # énergie des prédateurs
     APROIE = 10  # durée de vie des proies
-    FLAIR = 5  # flair des prédateurs
+    FLAIR = 8  # flair des prédateurs
     F_REPR_PRED = 8  # Fréquence de reproduction des prédateurs
     CALORIES_PROIE = 2  # Points d'énergies aquis à la consommation d'une proie
 
@@ -192,14 +194,16 @@ if __name__ == '__main__':
 
     naissance_proie(20)
     naissance_pred(5)
-    for _ in range(500):
+    for _ in range(300):
         liste_proie.append(len(proies))
         liste_pred.append(len(predateurs))
         naissance_proie(5)
         deplace_proie()
         g.actualiser()
+        time.sleep(0.1)
         reprod_proie()
         g.actualiser()
+        time.sleep(0.1)
         deplace_pred()
         g.actualiser()
         death_pred()
