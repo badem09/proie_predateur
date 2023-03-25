@@ -22,7 +22,7 @@ Le module tkiteasy reprend le module Tkinter.
 # Résultat
 
 La simulation respecte bien la relation proie-prédateur:
-- lorsque le nombre de proie augmente, celui des prédateur fait de même.
+- lorsque le nombre de proies augmente, celui des prédateurs fait de même.
 - lorsque celui-là diminue, le nombre de prédateur diminue également.
 - Et la diminution du nombre de prédateur entraine une prolifération des proies.
 
