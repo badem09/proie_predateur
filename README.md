@@ -3,7 +3,7 @@
 # Intro
 
 Le projet Hunt à été réalisé dans le cadre de mes études en BUT Informatique (voir hunt.pdf).
-Il consiste à implémenter le modèle [proie-predateur](https://fr.wikipedia.org/wiki/%C3%89quilibres_pr%C3%A9dateurs-proies)
+Il consiste à implémenter le modèle [proie-predateur](https://fr.m.wikipedia.org/wiki/%C3%89quations_de_pr%C3%A9dation_de_Lotka-Volterra)
 en language python.
 
 Les proies (en vert) se reproduisent lorsque qu'une autre est à proximité (case limitrophe). Une nouvelle proie apparait à proximité.
