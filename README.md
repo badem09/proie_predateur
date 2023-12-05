@@ -19,12 +19,18 @@ Le projet est structuré en 3 fichier python, le fichier main.py, le module tkit
 object Predateur et Proie.
 Le module tkiteasy reprend le module Tkinter.
 
+# Exécution
+
+L'exécution du fichier main nécessite les librairies suivantes : PIL, Tkinter et time.
+Exécutez le fichier main.
+Une fois, la simulation terminée, cliquez quelque part dans la fenêtre pour la fermer. 
+
 # Résultat
 
 La simulation respecte bien la relation proie-prédateur:
 - lorsque le nombre de proies augmente, celui des prédateurs fait de même.
 - lorsque celui-là diminue, le nombre de prédateur diminue également.
-- Et la diminution du nombre de prédateur entraine une prolifération des proies.
+- la diminution du nombre de prédateur entraine une prolifération des proies.
 
 Un cycle se forme donc.
 
