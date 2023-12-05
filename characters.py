@@ -11,5 +11,5 @@ class Predateur:
         self.graph = graph
         self.cadre_x = x
         self.cadre_y = y
-# Ne pas chasser 2 fois les même proies
+
 
