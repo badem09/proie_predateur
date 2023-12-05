@@ -23,7 +23,8 @@ Le module tkiteasy reprend le module Tkinter.
 
 L'exécution du fichier main nécessite les librairies suivantes : PIL, Tkinter et time.
 Exécutez le fichier main.
-Une fois, la simulation terminée, cliquez quelque part dans la fenêtre pour la fermer. 
+
+Une fois la simulation terminée, cliquez quelque part dans la fenêtre pour la fermer. 
 
 # Résultat
 
